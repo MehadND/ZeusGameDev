@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Bacteria : MonoBehaviour
 {
+    public class GameObject Bacteria
     public Rigidbody2D bacteria;
     public float speed = 3.0f;
     public GameObject[] gameObjects;
@@ -26,5 +27,4 @@ public class Bacteria : MonoBehaviour
     {
 
     }
-
 }
