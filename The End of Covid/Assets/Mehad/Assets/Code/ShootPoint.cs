@@ -47,4 +47,5 @@ public class ShootPoint : MonoBehaviour
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
 
+
 }

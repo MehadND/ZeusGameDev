@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public float speed = 3.0f;
-    public int lives = 3;
+    public static int lives = 3;
+    public static int score = 0;
 
     public Animator animator;
     public GUIStyle myStyle;
@@ -27,12 +28,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (lives <= 0)
+        {
+            lives = 3;
+            score = 0;
+        }
     }
 
+    [System.Obsolete]
     void FixedUpdate()
     {
         MoveCharacter();
     }
+
 
     void MoveCharacter()
     {
@@ -93,17 +101,30 @@ public class Player : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 100, 30), "Time: " + (int)Time.time, myStyle);
+        //GUI.Box(new Rect(10, 10, 100, 30), "Time: " + (int)Time.timeSinceLevelLoad, myStyle);
         GUI.Box(new Rect(10, 60, 100, 30), "Lives: " + lives, myStyle);
+        GUI.Box(new Rect(10, 110, 100, 30), "Score: " + score, myStyle);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "EnemyBox")
+        
+
+        if (collision.gameObject.name == "Bacteria(Clone)")
         {
             lives = lives - 1;
-            rb.transform.position *=(float) -0.05;
+            rb.transform.position *= (float)-3.0;
             //player.transform.position = new Vector2((float)(player.transform.position.x*0.2), (float)(player.transform.position.y * 0.2));
         }
+    }
+
+    public void increaseScore()
+    {
+        score += 5;
+    }
+
+    public int getLives()
+    {
+        return lives;
     }
 }
