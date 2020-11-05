@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         {
             lives = 3;
             score = 0;
+            SceneManager.LoadScene("Level 1");
         }
     }
 
