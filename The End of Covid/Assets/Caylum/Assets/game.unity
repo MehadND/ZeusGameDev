@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499814494}
   - component: {fileID: 499814493}
+  - component: {fileID: 499814495}
   m_Layer: 0
   m_Name: BacteriaSpawn
   m_TagString: Untagged
@@ -150,9 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9358508d442eba244a667e296f1d9a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPlayer: {fileID: 0}
+  Bact: {fileID: 0}
+  Player: {fileID: 0}
   bacteria: {fileID: 2055458018}
   speed: 1
-  gameObjects: []
 --- !u!4 &499814494
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +170,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499814495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499814492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1482bfda84ad424f81b1d1d73f30a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    bacteria: {fileID: 369042833664066798}
+    count: 5
+    rate: 0
+  - name: 
+    bacteria: {fileID: 369042833664066798}
+    count: 8
+    rate: 0
+  - name: 
+    bacteria: {fileID: 369042833664066798}
+    count: 12
+    rate: 0
+  spawnPoints: []
+  timeBetweenWaves: 8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,3 +355,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d05789aa4502c499a297bf8afbb406, type: 3}
+--- !u!1 &369042833664066797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 369042831625455629, guid: 70d05789aa4502c499a297bf8afbb406,
+    type: 3}
+  m_PrefabInstance: {fileID: 369042833664066796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &369042833664066798 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 369042831625455624, guid: 70d05789aa4502c499a297bf8afbb406,
+    type: 3}
+  m_PrefabInstance: {fileID: 369042833664066796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &369042833664066799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369042833664066797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1482bfda84ad424f81b1d1d73f30a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    bacteria: {fileID: 369042833664066798}
+    count: 5
+    rate: 0
+  - name: 
+    bacteria: {fileID: 369042833664066798}
+    count: 8
+    rate: 0
+  - name: 
+    bacteria: {fileID: 369042833664066798}
+    count: 12
+    rate: 0
+  spawnPoints: []
+  timeBetweenWaves: 8
