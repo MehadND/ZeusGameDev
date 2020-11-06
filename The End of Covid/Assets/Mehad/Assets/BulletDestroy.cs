@@ -22,10 +22,5 @@ public class BulletDestroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-
-        if (collision.gameObject.name == "Bacteria")
-        {
-            Destroy(gameObject);
-        }
     }
 }

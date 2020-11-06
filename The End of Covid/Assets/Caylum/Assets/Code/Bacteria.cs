@@ -90,5 +90,10 @@ public class Bacteria : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.name == "EnemyBox")
+        {
+            Destroy(gameObject);
+        }
     }
 }
