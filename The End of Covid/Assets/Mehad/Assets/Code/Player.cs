@@ -122,6 +122,10 @@ public class Player : MonoBehaviour
     public void increaseScore()
     {
         score += 5;
+        if (score == 200)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     public int getLives()
