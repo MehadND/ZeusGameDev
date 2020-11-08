@@ -41,5 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("Main Menu"); //loads the main menu
+        Player.score = 0;
     }
+
 }
