@@ -121,6 +121,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &421769199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+    type: 3}
+  m_PrefabInstance: {fileID: 456672668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &456672668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6220127086153631607, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_Name
+      value: BacteriaSpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b0138b717e70464e8104806e0784e27, type: 3}
 --- !u!1 &499814492
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +261,7 @@ MonoBehaviour:
   waves:
   - name: 
     bacteria: {fileID: 1036439614}
-    count: 5
+    count: 4
     rate: 0
   - name: 
     bacteria: {fileID: 1036439614}
@@ -196,7 +271,9 @@ MonoBehaviour:
     bacteria: {fileID: 1036439614}
     count: 12
     rate: 0
-  spawnPoints: []
+  spawnPoints:
+  - {fileID: 421769199}
+  - {fileID: 1036439614}
   timeBetweenWaves: 8
 --- !u!1 &519420028
 GameObject:
@@ -460,13 +537,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
         type: 3}
-      propertyPath: m_LocalPosition.x
+
       value: 8.32
+
+      value: 7
+
       objectReference: {fileID: 0}
     - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
         type: 3}
       propertyPath: m_LocalPosition.y
+
       value: 1.37
+
+      value: 7
+
       objectReference: {fileID: 0}
     - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
         type: 3}
@@ -496,7 +580,7 @@ PrefabInstance:
     - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7083619748725465445, guid: 1b0138b717e70464e8104806e0784e27,
         type: 3}
