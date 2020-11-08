@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.name == "Boss")
+        if (collision.gameObject.name == "Boss" || collision.gameObject.name == "Boss 2")
         {
             lives = lives - 1;
             rb.transform.position *= (float)-5.0;
@@ -128,6 +128,7 @@ public class Player : MonoBehaviour
             {
                 lives = 3;
                 score = 0;
+                Boss.bossLives = 200;
                 SceneManager.LoadScene("Level 2");
             }
         }
@@ -139,8 +140,8 @@ public class Player : MonoBehaviour
         if (score >= 200)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-      
         }
+        
     }
 
     public int getLives()

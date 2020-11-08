@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Boss : MonoBehaviour
+public class Boss2 : MonoBehaviour
 {
     public Player myPlayer;
-    public GameObject bossPlayer;
+    public GameObject bossPlayer2;
     public GameObject Player;
-    public Rigidbody2D boss;
-    public static float speed;
+    public Rigidbody2D boss2;
+    public float speed;
     public Transform player;
     private Vector2 movement;
-    public static int bossLives = 200;
     public GUIStyle myStyle;
 
     //public GameObject[] gameObjects;
@@ -22,7 +21,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         //MoveBacteria();
-        boss = this.GetComponent<Rigidbody2D>();
+        boss2 = this.GetComponent<Rigidbody2D>();
 
     }
 
@@ -58,7 +57,7 @@ public class Boss : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        boss.rotation = angle;
+        boss2.rotation = angle;
         direction.Normalize();
         movement = direction;
 
@@ -70,7 +69,7 @@ public class Boss : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        boss.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+        boss2.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -79,13 +78,13 @@ public class Boss : MonoBehaviour
         {
             myPlayer.increaseScore();
             Destroy(collision.gameObject);
-            bossLives -= 5;
+            Boss.bossLives -= 5;
         }
 
     }
     void OnGUI()
     {
         //GUI.Box(new Rect(10, 10, 100, 30), "Time: " + (int)Time.timeSinceLevelLoad, myStyle);
-        GUI.Box(new Rect(10, 170, 100, 30), "Boss Health: " + bossLives, myStyle);
+        //GUI.Box(new Rect(10, 170, 100, 30), "boss Health: " + bossLives, myStyle);
     }
 }
