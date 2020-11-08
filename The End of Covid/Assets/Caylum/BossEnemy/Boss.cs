@@ -78,7 +78,7 @@ public class Boss : MonoBehaviour
         {
             myPlayer.increaseScore();
             Destroy(collision.gameObject);
-            bossLives--;
+            bossLives -= 5;
         }
 
         if (collision.gameObject.name == "EnemyBox")

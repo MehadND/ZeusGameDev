@@ -28,12 +28,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lives <= 0)
-        {
-            lives = 3;
-            score = 0;
-            SceneManager.LoadScene("Level 1");
-        }
+        
     }
 
     [System.Obsolete]
@@ -116,6 +111,25 @@ public class Player : MonoBehaviour
             lives = lives - 1;
             rb.transform.position *= (float)-3.0;
             //player.transform.position = new Vector2((float)(player.transform.position.x*0.2), (float)(player.transform.position.y * 0.2));
+            if (lives <= 0)
+            {
+                lives = 3;
+                score = 0;
+                SceneManager.LoadScene("Level 1");
+            }
+        }
+
+        if (collision.gameObject.name == "Boss")
+        {
+            lives = lives - 1;
+            rb.transform.position *= (float)-5.0;
+            //player.transform.position = new Vector2((float)(player.transform.position.x*0.2), (float)(player.transform.position.y * 0.2));
+            if (lives <= 0)
+            {
+                lives = 3;
+                score = 0;
+                SceneManager.LoadScene("Level 2");
+            }
         }
     }
 
